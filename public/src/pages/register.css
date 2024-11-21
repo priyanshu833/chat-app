@@ -1,0 +1,127 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    background: url('../assets/bgg.jpeg') no-repeat center center/cover; /* Default background image */
+    background-size: cover; /* Ensure background image covers the entire screen */
+    background-position: center center; /* Center the background image */
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    img {
+      height: 5rem;
+    }
+    h1 {
+      color: white;
+      text-transform: uppercase;
+    }
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset -5px -5px rgba(0, 0, 0, 0.5);
+    border-radius: 2rem;
+    padding: 5rem;
+    height: 550px;
+    width: 450px;
+  }
+  
+  input {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    width: 100%;
+    font-size: 1rem;
+    &:focus {
+      border: 0.1rem solid #997af0;
+      outline: none;
+    }
+  }
+  
+  button {
+    background-color: #4e0eff;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    &:hover {
+      background-color: #4e0eff;
+    }
+  }
+  
+  span {
+    color: rgb(15, 1, 1);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 800;
+    a {
+      color: #603ebb;
+      text-decoration: none;
+      font-weight: 600;
+      
+      text-decoration: underline;
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Mobile View: Change Background Image */
+  @media (max-width: 768px) {
+    body {
+      background: url('../../public/bgg-mobile.jpeg') no-repeat center center/cover; /* Mobile-specific background */
+      background-size: cover; /* Ensure it still covers the entire screen */
+      background-position: center center;
+    }
+    
+    /* Other adjustments for mobile (optional) */
+    .brand img {
+      height: 4rem; /* Resize the brand logo */
+    }
+  
+    form {
+      padding: 3rem 2rem; /* Adjust padding for mobile */
+      width: 90%; /* Make the form width more flexible */
+    }
+  
+    input, button {
+      font-size: 0.9rem; /* Adjust input/button font size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      padding-top: 1rem;
+      background: url('../../public/bgg-mobile.jpeg') no-repeat center center/cover; /* Ensure background image for smaller screens */
+    }
+  
+    form {
+      padding: 2rem;
+      width: 95%;
+    }
+  
+    .brand img {
+      height: 3rem; /* Resize the logo for very small screens */
+    }
+  
+    h1 {
+      font-size: 1.5rem; /* Adjust font size for heading */
+    }
+  }
+  
